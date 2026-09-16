@@ -122,8 +122,14 @@ let
     When = PostTransaction
     Depends = systemd
     Depends = mkinitcpio
-    Exec = /usr/bin/systemctl start nixboot-systemd-boot-stage.service
+    Exec = /usr/bin/systemctl restart nixboot-systemd-boot-stage.service
   '';
+  # NOTE: `restart`, not `start`. The stage unit is a RemainAfterExit oneshot, and `start`
+  # on an already-succeeded oneshot is a no-op. With `start`, a kernel update landing while
+  # the previous stage run is still recorded as active silently rebuilds nothing: the ESP
+  # keeps the previous UKI while pacman deletes its module tree, and the next boot of that
+  # UKI fails mounting anything backed by a module (observed 2026-09-16: `unknown filesystem
+  # type vfat` on /boot -> emergency mode). Same rationale as the 96-hook below.
 
   # Read by an operator and by anything that aggregates host health. /run, not /var, on purpose:
   # the fact this file states is scoped to the current boot and a reboot is what resolves it, so a
