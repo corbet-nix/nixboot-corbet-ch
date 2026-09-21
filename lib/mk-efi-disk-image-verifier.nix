@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 # Produce a verifier for a complete raw cloud disk. Expected geometry is data:
 # provider/storage adapters supply it, and nixboot checks rather than guessing.
 { pkgs

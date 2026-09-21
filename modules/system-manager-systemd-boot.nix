@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 # nixboot's system-manager backend for Arch-family hosts.
 #
 # This is intentionally a clean systemd-boot + UKI backend. A system-manager host has no

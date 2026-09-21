@@ -134,11 +134,11 @@ adapter may translate a fact; it must not become a second source for it.
 
 The other two ownership boundaries are equally strict:
 
-- [nixrescue](https://github.com/julian-corbet/nixrescue-corbet-ch) produces
+- [nixrescue](https://github.com/corbet-nix/nixrescue-corbet-ch) produces
   the recovery content and runtime;
 - nixboot produces and verifies the boot artifact around either a `primary`
   or `nixrescue` payload;
-- [nixdeploy](https://github.com/julian-corbet/nixdeploy-corbet-ch) alone owns
+- [nixdeploy](https://github.com/corbet-nix/nixdeploy-corbet-ch) alone owns
   delivery: scheduling, transport, materialization, slot rotation and
   selection, activation, rollback, reimage, and typed outcomes.
 
@@ -262,8 +262,8 @@ the protected hashes again. It never deletes a directory recursively.
 
 ```nix
 {
-  inputs.nixboot.url = "github:julian-corbet/nixboot-corbet-ch";
-  inputs.nixcpu.url = "github:julian-corbet/nixcpu-corbet-ch";
+  inputs.nixboot.url = "github:corbet-nix/nixboot-corbet-ch";
+  inputs.nixcpu.url = "github:corbet-nix/nixcpu-corbet-ch";
 
   # a system-manager flake's own host config:
   imports = [
@@ -300,7 +300,7 @@ the protected hashes again. It never deletes a directory recursively.
 See [CONTRACT.md](CONTRACT.md)'s B20 for the full reasoning, and
 `checks/system-manager.nix` for its eval-test suite (the same
 `lib.evalModules`-stub technique
-[nixarch](https://github.com/julian-corbet/nixarch-corbet-ch)'s own checks
+[nixarch](https://github.com/corbet-nix/nixarch-corbet-ch)'s own checks
 use for its system-manager modules).
 
 ## Status
@@ -320,7 +320,7 @@ host identity — see `secureBoot.pkiBundle`/`keySource` and
 [CONTRACT.md](CONTRACT.md)'s B21–B24). What genuinely remains outside this
 module, stated as a ceiling rather than an oversight: the initrd-time
 LUKS/ZFS **unlock-member** surface belongs to whichever disk-layout module
-declares those members — [nixluks](https://github.com/julian-corbet/nixluks-corbet-ch)'s
+declares those members — [nixluks](https://github.com/corbet-nix/nixluks-corbet-ch)'s
 own `volumes.<name>.initrdUnlock.*`, not nixboot, which has no member list
 of its own to attach that mechanism to (see the "CROSS-MODULE COUPLING"
 comment on `remoteUnlock`'s common initrd-network block); and the initrd
@@ -344,7 +344,7 @@ than add another mirrored boot or rollout surface.
 
 ```nix
 {
-  inputs.nixboot.url = "github:julian-corbet/nixboot-corbet-ch";
+  inputs.nixboot.url = "github:corbet-nix/nixboot-corbet-ch";
   # A host that ever sets loader.program = "lanzaboote" also needs
   # lanzaboote's own module composed in — see "What nixboot is" above.
   inputs.lanzaboote.url = "github:nix-community/lanzaboote";
@@ -431,15 +431,15 @@ artifact is delivery and therefore belongs to nixdeploy.
 ## Related projects
 
 Part of the same small, independently usable module family:
-[nixarch](https://github.com/julian-corbet/nixarch-corbet-ch),
-[nixnas](https://github.com/julian-corbet/nixnas),
-[nixvps](https://github.com/julian-corbet/nixvps-corbet-ch),
-[nixrescue](https://github.com/julian-corbet/nixrescue-corbet-ch), and
-[nixdeploy](https://github.com/julian-corbet/nixdeploy-corbet-ch) meet at the
-class, role, and delivery boundaries above. [nixram](https://github.com/julian-corbet/nixram-corbet-ch)
-and [nixgpu](https://github.com/julian-corbet/nixgpu-corbet-ch) remain
+[nixarch](https://github.com/corbet-nix/nixarch-corbet-ch),
+[nixnas](https://github.com/corbet-nix/nixnas),
+[nixvps](https://github.com/corbet-nix/nixvps-corbet-ch),
+[nixrescue](https://github.com/corbet-nix/nixrescue-corbet-ch), and
+[nixdeploy](https://github.com/corbet-nix/nixdeploy-corbet-ch) meet at the
+class, role, and delivery boundaries above. [nixram](https://github.com/corbet-nix/nixram-corbet-ch)
+and [nixgpu](https://github.com/corbet-nix/nixgpu-corbet-ch) remain
 separate subsystems; boot does not absorb their policy.
 
-## License
+## Licence
 
-[MIT License](LICENSE) &copy; 2026 Julian Corbet
+Outbound licence is `MIT OR Apache-2.0`. See `LICENSE-MIT` and `LICENSE-APACHE`; every source file carries `SPDX-License-Identifier: MIT OR Apache-2.0`.

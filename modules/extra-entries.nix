@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 # modules/extra-entries.nix
 #
 # nixboot.extraEntries -- SECOND, non-default UKIs on an ESP that

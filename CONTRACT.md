@@ -5,7 +5,7 @@ about every knob it exposes. The behaviors are the spec; `modules/nixboot.nix`
 is one implementation. When implementation and contract disagree, the
 contract wins — and if a goal itself is wrong, fix it *here*, not in a chat
 log or a commit message. (Same convention as the sibling
-[nixgpu](https://github.com/julian-corbet/nixgpu-corbet-ch) project's own
+[nixgpu](https://github.com/corbet-nix/nixgpu-corbet-ch) project's own
 `CONTRACT.md`.)
 
 This contract was written after finding the whole domain — loader

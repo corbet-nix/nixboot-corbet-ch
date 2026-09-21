@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 # Tool exposure shared by the NixOS and System Manager backends.  This is intentionally a
 # per-tool decision: inspecting the firmware's actual NVRAM state is useful on some physical
 # hosts even when Secure Boot is not yet enabled, and is meaningless on containers.

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 # Eval-time checks for the system-manager systemd-boot/UKI backend. A small option-surface stub
 # is enough here: these tests prove generated declarations and guards without pretending a real
 # Arch ESP or firmware can be exercised in a Nix evaluation.

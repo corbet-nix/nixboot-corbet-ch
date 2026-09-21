@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 # modules/nixboot.nix
 #
 # ONE declarative boot stance per host: firmware handoff through to

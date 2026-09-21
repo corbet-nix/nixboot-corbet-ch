@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 # Interactive custody tools for a passphrase-encrypted Secure Boot PKI archive.
 # The ciphertext may be public; decryption is deliberately unsuitable for an
 # unattended build because the passphrase is read by age from the terminal.

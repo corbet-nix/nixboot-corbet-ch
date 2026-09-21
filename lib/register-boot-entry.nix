@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 # lib/register-boot-entry.nix
 #
 # The idempotent, self-healing `efibootmgr` registrar -- extracted out of

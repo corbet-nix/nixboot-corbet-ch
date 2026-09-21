@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 # Verify the complete two-phase signing result against its immutable request
 # and the db certificate expected by the destination firmware policy.
 { pkgs, name ? "nixboot-verify-signed-uki" }:

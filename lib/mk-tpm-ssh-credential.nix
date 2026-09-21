@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 # Build a host-side maintainer for the systemd-stub global credential consumed by initrd and
 # nixrescue sshd. It contains no host identity at build time: the successful, passphrase-unlocked
 # host generates an Ed25519 key and seals it to its own TPM/PCR state at runtime.

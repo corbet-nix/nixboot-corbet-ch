@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 {
   description = "nixboot - one declarative boot stance per host: firmware handoff through to switch-root";
 

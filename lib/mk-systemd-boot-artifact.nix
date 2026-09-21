@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 # Build the UEFI boot portion of an offline image. The caller owns the disk
 # geometry and root filesystem; this function owns the files firmware and
 # systemd-boot consume before switch-root.

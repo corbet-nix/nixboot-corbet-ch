@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 # Turn one already-built UKI into a reproducible signing request. The request
 # contains no key material and is therefore safe to build and publish through
 # ordinary Nix infrastructure.

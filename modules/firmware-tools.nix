@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 # Firmware maintenance and local firmware inventory are boot-adjacent tools.  The package names
 # are deliberately produced once so the NixOS and system-manager backends select the same tools
 # without either backend inventing a second public option surface.

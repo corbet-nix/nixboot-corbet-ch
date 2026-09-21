@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 # Build one self-contained UKI from a NixOS toplevel.
 #
 # This is deliberately a library primitive rather than a NixOS module: a

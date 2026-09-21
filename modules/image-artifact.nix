@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 { config, lib, pkgs, ... }:
 let
   cfg = config.nixboot.imageArtifact;

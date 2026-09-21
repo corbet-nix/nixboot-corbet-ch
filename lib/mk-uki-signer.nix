@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 # Runtime UKI signer. The private key and certificate are command-line paths
 # supplied outside evaluation; neither can become a Nix store dependency.
 { pkgs, name ? "nixboot-sign-uki" }:

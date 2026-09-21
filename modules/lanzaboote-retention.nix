@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 # Capacity-accounted Lanzaboote retention.
 #
 # Upstream lzbt chooses only the newest profile links and garbage-collects only

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 # checks/default.nix
 #
 # EVAL-TIME tests for nixboot.extraEntries (modules/extra-entries.nix), plus one BUILD-level

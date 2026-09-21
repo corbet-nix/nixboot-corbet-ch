@@ -89,7 +89,7 @@ back the root/data filesystems, in stage 1) is NOT this module's job at
 all, and never will be — nixboot has no member list of its own to attach
 that mechanism to (see `remoteUnlock`'s own "CROSS-MODULE COUPLING" comment
 in `modules/nixboot.nix`). That mechanism now lives in
-[nixluks](https://github.com/julian-corbet/nixluks-corbet-ch)'s
+[nixluks](https://github.com/corbet-nix/nixluks-corbet-ch)'s
 `volumes.<name>.initrdUnlock.*` — a previous revision of this page listed
 it as a nixboot gap; it was actually a gap between two repos each pointing
 at the other, now closed on nixluks's side.
